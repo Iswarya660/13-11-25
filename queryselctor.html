@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class = "para"  id="para1" >"message"1</p>
+    <p class = "para"  id="para2" >"message"2</p>
+    <p class = "para"  id="para3" >"message"3</p>
+    <p class = "para"  id="para4" >"message"4</p>
+    <div class="aishu" id="pooja" >chinni</div>
+    <p class = "para"  id="para1" >"message"</p>
+<form></form>
+<form></form>
+<form></form>
+<img/>
+<img/>
+<img/>
+<ul>
+    <li>apple</li>
+    <li>banana</li>
+    <li>mango</li>
+</ul>
+<div class="box">Hello</div>
+<div id="name">johan</div>
+<ul>
+    <li>Item 1</li>
+</ul>
+<ul>
+    <li>aishu</li>
+    <li>chinni</li>
+</ul>
+<p>prabhas</p>
+<p>salaar</p>
+<p>kalki</p>
+<!-- <p class = "para"><b>HELLO</b>wolrd</p> -->
+
+</body>
+<script>
+    let a =document.querySelector("p")
+    console.log(a)
+    let b =document.querySelectorAll(".para")
+    console.log(b)
+    let c =document.querySelector("#para2")
+    console.log(c)
+    let d = document.querySelector(".aishu")
+    console.log(d)
+    let form_elem=document.forms
+    console.log(form_elem,"form element")
+    let img_elem=document.images
+    console.log(img_elem,"images element")
+    let a_elem=document.anchor
+    // ques 1
+    
+    let p = document.createElement('p');
+    p.innerText = "Hello DOM";
+    document.body.appendChild(p);
+    
+    // ouput:"Hello DOM"
+// ques 2
+    let div = document.querySelector('div');
+    let span=
+    document.createElement('span');
+    span.textContent="New Text";
+    div.appendChild(span);
+    // New Text
+//  ques 3
+    let li = document.querySelectorAll('li');
+    console.log(li.length);
+    // 3
+// ques 4
+    let el = document.querySelector('box');
+    el.remove();
+    // .remove()=deletes the selected element form the web page
+// ques 5
+    let input=
+    document.querySelector('#name');
+    input.value = "john";
+    console.log(input.value);
+    // john
+// ques 6
+    let ul = document.createElement('ul');
+    let lii = document.createElement('lii');
+    lii.innerText="item 1";
+    ul.appendChild(lii);
+    document.body.appendChild(ul);
+// item1
+// ques 7
+ let items = 
+ document.querySelectorAll(".items")
+ items[0].textContent = "updated item";
+//  updated item
+// ques 8
+let para = document.createElement('p');
+para.innerHTML = "<b>Hello</b>wolrd";
+document.body.appendChild(para);
+// Hello World hello is bold
+// ques 9
+let divv =  document.createElement('div');
+let span = document.createElement('span');
+div.appendChild(span);
+div.removechild(span);
+console.log(div.children.lenght);
+// 0
+// ques 10
+document.querySelectorAll('p').forEach(el => el.style.color = 'red');
+</script>
+
+</html>
